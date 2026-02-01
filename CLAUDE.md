@@ -59,3 +59,10 @@ cp -r images s3/         # Copies images to production folder
 - `<meta property="og:description">` - Social sharing preview
 
 **Workflow:** After any content changes, run `python3 minify.py && cp -r images s3/` to update production build.
+
+## Claude Code Permissions
+
+Allowed commands (`.claude/settings.local.json`):
+- `git add:*` - Stage files
+- `git commit:*` - Create commits
+- `git push:*` - Push to remote
