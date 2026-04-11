@@ -360,7 +360,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
       <a href="#contact" class="btn btn-secondary">Let's talk</a>
     </div>
     <div class="meta">
-      <img src="https://igorsamulenko.com/images/avatar.jpeg" alt="Igor Samulenko" class="avatar">
+      <img src="images/avatar.jpeg" alt="Igor Samulenko" class="avatar">
       <span>Bay Area, CA</span>
       <a href="mailto:igor.samulenko@gmail.com">igor.samulenko@gmail.com</a>
       <a href="https://linkedin.com/in/igorsamulenko" target="_blank" rel="noopener">LinkedIn</a>
@@ -701,7 +701,6 @@ const countObs=new IntersectionObserver(es=>es.forEach(e=>{
   const suffix=el.dataset.suffix||'';
   const prefix=el.dataset.prefix||'';
   if(target===0){el.textContent=prefix+'0'+suffix;countObs.unobserve(el);return}
-  let start=0;
   const duration=800;
   const t0=performance.now();
   function tick(now){
@@ -765,11 +764,15 @@ document.querySelectorAll('.case-mockup').forEach(mockup=>{
 
   const easter={
     'sudo hire igor':['Permission granted. Sending offer letter... ✓'],
-    'sudo hire':['Usage: sudo hire <candidate>'],
+    'sudo hire':['Usage: sudo hire &lt;candidate&gt;'],
     'vim':['You\'re stuck now. There is no escape.','(just kidding, type something else)'],
     'exit':['Nice try. You can\'t leave.'],
-    'ls':['about.txt  case-studies/  resume.pdf  coffee.sh'],
+    'ls':['status.txt  contact.txt  resume.pdf  skills.txt'],
     'cat resume.pdf':['That\'s a binary file. Try: resume'],
+    'cat status.txt':['open to Staff / Principal frontend roles'],
+    'cat contact.txt':['igor.samulenko@gmail.com','linkedin.com/in/igorsamulenko','github.com/isamulenko'],
+    'cat skills.txt':['React · TypeScript · GraphQL · Redux · Node.js','Jest · Cypress · Storybook · CI/CD','Performance Optimization · System Design'],
+    'ping':['Usage: ping &lt;host&gt;'],
     'ping google':['PING google.com — been there, built that.'],
     'rm -rf':['Nice try.'],
     'hello':['Hey! Type help to see what I can do.'],
@@ -790,7 +793,11 @@ document.querySelectorAll('.case-mockup').forEach(mockup=>{
   function addCommand(cmd){
     const inputLine=body.querySelector('.t-input-line');
     const p=document.createElement('p');
-    p.innerHTML='<span class="t-prompt">$</span> '+cmd;
+    const prompt=document.createElement('span');
+    prompt.className='t-prompt';
+    prompt.textContent='$ ';
+    p.appendChild(prompt);
+    p.appendChild(document.createTextNode(cmd));
     body.insertBefore(p,inputLine);
   }
 
@@ -812,7 +819,8 @@ document.querySelectorAll('.case-mockup').forEach(mockup=>{
     } else if(easter[cmd]){
       addOutput(easter[cmd]);
     } else {
-      addOutput(['command not found: '+cmd+'. Type help for options.'],true);
+      const errMsg='command not found: '+cmd.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'. Type help for options.';
+      addOutput([errMsg],true);
     }
   });
 

@@ -1,6 +1,6 @@
 # igorsamulenko.com
 
-Single-page portfolio website for Igor Samulenko, Staff Software Engineer.
+Single-page portfolio website for Igor Samulenko, Staff Frontend Engineer.
 
 ## Files
 
@@ -10,22 +10,26 @@ Single-page portfolio website for Igor Samulenko, Staff Software Engineer.
 | `s3/index.html` | Minified production version |
 | `s3/images/avatar.jpeg` | Profile photo (production) |
 | `images/avatar.jpeg` | Profile photo (source) |
+| `Igor_Samulenko_Staff_SWE_2026.pdf` | Downloadable resume |
 | `minify.py` | Minification script |
 
 ## Features
 
-- **Sections**: Hero, Summary, Skills, Experience, Education, Interests, Footer
+- **Sections**: Hero, About, Selected Work, Experience, How I Work, What Colleagues Say, Contact
+- **Selected Work**: Expandable case-study cards with metrics, tags, and SVG mockups
+- **Interactive terminal**: Command-line contact section with easter eggs
+- **Animated metrics**: Count-up effect on scroll via Intersection Observer
 - **Dark/Light mode**: Toggle button, follows system preference by default
 - **Responsive**: Mobile-first design with hamburger menu
 - **Smooth scroll**: Anchor navigation with scroll padding
-- **Timeline**: Connected dots for experience section
-- **Animations**: Fade-in on scroll via Intersection Observer
+- **Scroll reveal**: Fade-in animations via Intersection Observer
+- **Accessible**: Skip link, ARIA attributes, keyboard support, reduced-motion support
 
 ## Tech Stack
 
 - Vanilla HTML/CSS/JS (no frameworks)
-- Fonts: Playfair Display + DM Sans (Google Fonts)
-- Icons: Heroicons (inline SVGs)
+- Fonts: DM Serif Display + Outfit + JetBrains Mono (Google Fonts)
+- Icons: Inline SVGs
 
 ## Configuration
 
