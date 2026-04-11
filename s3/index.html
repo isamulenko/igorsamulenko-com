@@ -54,7 +54,6 @@ const target=parseInt(el.dataset.target)||0;
 const suffix=el.dataset.suffix||'';
 const prefix=el.dataset.prefix||'';
 if(target===0){el.textContent=prefix+'0'+suffix;countObs.unobserve(el);return}
-let start=0;
 const duration=800;
 const t0=performance.now();
 function tick(now){
@@ -102,8 +101,8 @@ status:['"open to Staff / Principal frontend roles"'],
 location:['"Bay Area, CA"'],
 contact:[
 '<a href="mailto:igor.samulenko@gmail.com">igor.samulenko@gmail.com</a>',
-'<a href="https:
-'<a href="https:
+'<a href="https://linkedin.com/in/igorsamulenko" target="_blank" rel="noopener">linkedin.com/in/igorsamulenko</a>',
+'<a href="https://github.com/isamulenko" target="_blank" rel="noopener">github.com/isamulenko</a>',
 ],
 skills:['React · TypeScript · GraphQL · Redux · Node.js','Jest · Cypress · Storybook · CI/CD','Performance Optimization · System Design'],
 resume:['<a href="/Igor_Samulenko_Staff_SWE_2026.pdf" target="_blank" rel="noopener">Download resume (PDF)</a>'],
@@ -135,7 +134,11 @@ body.scrollTop=body.scrollHeight;
 function addCommand(cmd){
 const inputLine=body.querySelector('.t-input-line');
 const p=document.createElement('p');
-p.innerHTML='<span class="t-prompt">$</span> '+cmd;
+const prompt=document.createElement('span');
+prompt.className='t-prompt';
+prompt.textContent='$ ';
+p.appendChild(prompt);
+p.appendChild(document.createTextNode(cmd));
 body.insertBefore(p,inputLine);
 }
 input.addEventListener('keydown',e=>{
@@ -154,7 +157,8 @@ addOutput(commands[cmd]);
 } else if(easter[cmd]){
 addOutput(easter[cmd]);
 } else {
-addOutput(['command not found: '+cmd+'. Type help for options.'],true);
+const errMsg='command not found: '+cmd.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'. Type help for options.';
+addOutput([errMsg],true);
 }
 });
 body.addEventListener('click',e=>{

@@ -25,7 +25,7 @@ def minify_css(match):
 def minify_js(match):
     """Minify JS within script tags."""
     js = match.group(1)
-    js = re.sub(r'//[^\n]*\n', '\n', js)  # Remove single-line comments
+    js = re.sub(r'(?<![:\'"])//[^\n]*\n', '\n', js)  # Remove single-line comments (not in URLs)
     js = re.sub(r'/\*[\s\S]*?\*/', '', js)  # Remove multi-line comments
     js = re.sub(r'^\s+', '', js, flags=re.MULTILINE)  # Remove leading whitespace
     js = re.sub(r'\n+', '\n', js)  # Collapse newlines

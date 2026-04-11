@@ -701,7 +701,6 @@ const countObs=new IntersectionObserver(es=>es.forEach(e=>{
   const suffix=el.dataset.suffix||'';
   const prefix=el.dataset.prefix||'';
   if(target===0){el.textContent=prefix+'0'+suffix;countObs.unobserve(el);return}
-  let start=0;
   const duration=800;
   const t0=performance.now();
   function tick(now){
@@ -790,7 +789,11 @@ document.querySelectorAll('.case-mockup').forEach(mockup=>{
   function addCommand(cmd){
     const inputLine=body.querySelector('.t-input-line');
     const p=document.createElement('p');
-    p.innerHTML='<span class="t-prompt">$</span> '+cmd;
+    const prompt=document.createElement('span');
+    prompt.className='t-prompt';
+    prompt.textContent='$ ';
+    p.appendChild(prompt);
+    p.appendChild(document.createTextNode(cmd));
     body.insertBefore(p,inputLine);
   }
 
@@ -812,7 +815,8 @@ document.querySelectorAll('.case-mockup').forEach(mockup=>{
     } else if(easter[cmd]){
       addOutput(easter[cmd]);
     } else {
-      addOutput(['command not found: '+cmd+'. Type help for options.'],true);
+      const errMsg='command not found: '+cmd.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'. Type help for options.';
+      addOutput([errMsg],true);
     }
   });
 

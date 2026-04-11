@@ -18,6 +18,7 @@ View at http://localhost:8000
 ```bash
 python3 minify.py        # Minifies index.html -> s3/index.html
 cp -r images s3/         # Copies images to production folder
+cp *.pdf s3/             # Copies resume PDF to production folder
 ```
 
 ## Architecture
