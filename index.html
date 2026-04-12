@@ -354,7 +354,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
   <div class="inner">
     <div class="available-badge">Open to Staff / Principal roles</div>
     <h1>I build frontend systems<br>that work at <span class="accent">scale</span></h1>
-    <p class="subtitle">15+ years at Intuit, Amazon, and Google. I architect component systems that stay fast as products grow, and I lead the teams that ship them.</p>
+    <p class="subtitle">15+ years at Intuit, Amazon, and Google. Component systems that stay fast as products grow, and the teams that ship them.</p>
     <div class="cta-row">
       <a href="#work" class="btn btn-primary">What I've built</a>
       <a href="#contact" class="btn btn-secondary">Let's talk</a>
@@ -373,7 +373,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
   <div class="inner reveal">
     <h2 class="section-label">About</h2>
     <p class="about-text">
-      The work I'm proudest of is Intuit's Data Discovery platform, the internal tool that data workers across the company use to discover and explore the data behind TurboTax, QuickBooks, Credit Karma, and Mailchimp. I redesigned the search experience from scratch, fixed a lineage visualization that was crashing browsers, and led the frontend team that <strong>5,000+ data workers</strong> depended on daily. Before that, I owned the "Your Locations" feature for the Alexa mobile app at Amazon, serving <strong>10M+ users</strong> on React Native.
+      The work I'm proudest of is Intuit's Data Discovery platform, the internal tool that data workers across the company use to discover and explore the data behind TurboTax, QuickBooks, Credit Karma, and Mailchimp. Redesigned the search experience from scratch, fixed a lineage visualization that was crashing browsers, and led the frontend team that <strong>5,000+ data workers</strong> depended on daily. Before Intuit, owned the "Your Locations" feature for the Alexa mobile app at Amazon, serving <strong>10M+ users</strong> on React Native.
     </p>
   </div>
 </section>
@@ -393,7 +393,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         <div class="case-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">REST API</span><span class="tag">CI/CD</span></div>
         <div class="case-detail">
           <p><strong>The problem:</strong> Data workers across the enterprise were abandoning search queries and asking colleagues on Slack instead. Queries took 3-5 seconds. Precision was poor.</p>
-          <p><strong>What I built:</strong> I led a 6-person team to redesign the search from scratch. The core architectural decision: make the entire faceted search UI config-driven. Each facet type is defined in JSON configuration. Adding a new filter means adding a config entry, not writing new code. This cost two extra sprints upfront but paid for itself within the first quarter as 10+ new filter types were added through config alone.</p>
+          <p><strong>What I built:</strong> Led a 6-person team to redesign the search from scratch. The core architectural decision: make the entire faceted search UI config-driven. Each facet type is defined in JSON configuration. Adding a new filter means adding a config entry, not writing new code. This cost two extra sprints upfront but paid for itself within the first quarter as 10+ new filter types were added through config alone.</p>
           <p><strong>The result:</strong> Queries dropped from 3-5 seconds to 200-400ms. Two of the three engineers I mentored were promoted within a year.</p>
           <p>Part of Intuit's Data Mesh initiative, featured at <a href="https://www.youtube.com/watch?v=L_Q7LPB5HcA" target="_blank" rel="noopener">AWS re:Invent</a> and in Intuit's <a href="https://medium.com/intuit-engineering/the-data-mesh-strategy-behind-intuits-global-financial-technology-platform-db862fd45e0b" target="_blank" rel="noopener">engineering blog</a>.</p>
           <div class="case-mockup">
@@ -449,8 +449,8 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         <div class="case-tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">Virtual Scrolling</span><span class="tag">Profiling</span></div>
         <div class="case-detail">
           <p><strong>The problem:</strong> When users opened large data lineage graphs (2,500+ nodes), the app froze for up to 3 minutes. Memory spiked to 700MB. People were force-quitting browsers. 500+ users were affected daily.</p>
-          <p><strong>The wrong assumption:</strong> I initially assumed the backend API was the bottleneck. Spent two days profiling the wrong layer. The backend was fine.</p>
-          <p><strong>The real fix:</strong> Chrome DevTools revealed the frontend was making 3 API calls when only 2 were needed, rendering all 2,500+ rows without virtualization, and duplicating state across components. I eliminated the redundant call, parallelized the remaining two, migrated to virtual scrolling, introduced a shared Redux store, and wrote 24 regression tests.</p>
+          <p><strong>The wrong assumption:</strong> Initially assumed the backend API was the bottleneck. Spent two days profiling the wrong layer. The backend was fine.</p>
+          <p><strong>The real fix:</strong> Chrome DevTools revealed the frontend was making 3 API calls when only 2 were needed, rendering all 2,500+ rows without virtualization, and duplicating state across components. Eliminated the redundant call, parallelized the remaining two, migrated to virtual scrolling, introduced a shared Redux store, and wrote 24 regression tests.</p>
           <p><strong>The lesson:</strong> Don't let intuition skip diagnostics. Profile end-to-end first. This became our team's documented best practice for performance debugging.</p>
           <div class="case-mockup">
             <svg aria-hidden="true" viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +497,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         <div class="case-tags"><span class="tag">RUM/FCI</span><span class="tag">Code Coverage</span><span class="tag">Storybook</span><span class="tag">CI/CD</span></div>
         <div class="case-detail">
           <p><strong>The problem:</strong> Frontend technical debt was invisible. No consistent way to measure RUM adoption, code coverage, test infrastructure, or documentation across teams. Teams couldn't advocate for remediation time because they couldn't quantify the problem.</p>
-          <p><strong>What I built:</strong> A phased scorecard framework. Phase 1 established baselines without requiring immediate fixes, reducing resistance. Phase 2 introduced prioritized targets. I framed it as a tool that helps teams make the case for tech debt time, not a stick to beat them with.</p>
+          <p><strong>What I built:</strong> A phased scorecard framework. Phase 1 established baselines without requiring immediate fixes, reducing resistance. Phase 2 introduced prioritized targets. Framed it as a tool that helps teams make the case for tech debt time, not a stick to beat them with.</p>
           <p><strong>The result:</strong> 80% coverage across all frontend plugins. $10K+ in OpEx savings identified. Teams that were initially resistant adopted the framework.</p>
           <div class="case-mockup">
             <svg aria-hidden="true" viewBox="0 0 560 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -555,7 +555,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         <div class="case-tags"><span class="tag">Cursor AI</span><span class="tag">Claude</span><span class="tag">PR Automation</span></div>
         <div class="case-detail">
           <p><strong>The problem:</strong> Our frontend team was under pressure to ship more per quarter, but velocity had plateaued.</p>
-          <p><strong>What I did:</strong> I proved it with my own output first. Scaffolding a React component with tests and Storybook went from ~45 minutes to ~15-20 minutes. I ran a brown bag using real backlog tasks and presented results at an engineering-wide forum. My PRs were passing review at the same quality bar, just faster. I also enabled a PR review agent across our repositories that caught mechanical issues so human reviewers could focus on design and logic.</p>
+          <p><strong>What I did:</strong> Proved it with my own output first. Scaffolding a React component with tests and Storybook went from ~45 minutes to ~15-20 minutes. Ran a brown bag using real backlog tasks and presented results at an engineering-wide forum. PRs were passing review at the same quality bar, just faster. Also enabled a PR review agent across our repositories that caught mechanical issues so human reviewers could focus on design and logic.</p>
           <p><strong>The result:</strong> Adoption across the broader 50-person org. My manager noted the team was "concretely accelerating the way we deliver through AI tooling."</p>
         </div>
       </article>
@@ -599,10 +599,10 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
   <div class="inner">
     <h2 class="section-label reveal">How I work</h2>
     <div class="approach-prose">
-      <p class="reveal">I get things moving. When requirements are vague, I don't wait for clarity to arrive — I dig in, talk to the right people, prototype something tangible, and let that drive the conversation forward. Ambiguity is just a problem to solve, not a reason to stall.</p>
-      <p class="reveal">I write the spec, build the first component, and hand the team a clear path. I like giving people direction through working code and well-structured technical documents — not abstract plans. When someone picks up my work, the patterns should make the next decision obvious.</p>
-      <p class="reveal">Frontend is where I come alive. I care deeply about component architecture, performance, and that moment when a UI just clicks — when it's fast, polished, and people notice. I've spent 15 years chasing that feeling across React, TypeScript, and large-scale design systems.</p>
-      <p class="reveal">I pick up what I need to. I started my career writing Java backends, then moved through ActionScript, AngularJS, and landed on React and TypeScript — each shift because that's where the most interesting problems were. New framework, unfamiliar domain, a tool that didn't exist last month — I learn fast and start contributing before the onboarding doc says I should.</p>
+      <p class="reveal">I get things moving. When requirements are vague, the move is to dig in, talk to the right people, prototype something tangible, and let that drive the conversation forward. Ambiguity is just a problem to solve, not a reason to stall.</p>
+      <p class="reveal">Write the spec, build the first component, hand the team a clear path. Direction comes through working code and well-structured technical documents, not abstract plans. When someone picks up my work, the patterns should make the next decision obvious.</p>
+      <p class="reveal">Frontend is where I come alive. Component architecture, performance, and that moment when a UI just clicks, when it's fast, polished, and people notice. 15 years chasing that feeling across React, TypeScript, and large-scale design systems.</p>
+      <p class="reveal">My career started in Java backends, then moved through ActionScript, AngularJS, and landed on React and TypeScript, each shift because that's where the most interesting problems were. New framework, unfamiliar domain, a tool that didn't exist last month. Learn fast, start contributing before the onboarding doc says to.</p>
       <p class="reveal">I ship. Scope gets trimmed, edge cases get filed for later, but the thing goes out the door and it works. Then we iterate.</p>
     </div>
   </div>
