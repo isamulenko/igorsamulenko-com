@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Igor Samulenko — Staff Frontend Engineer</title>
-<meta name="description" content="Staff Frontend Engineer with 15+ years building high-performance platforms at Intuit, Amazon, and Google. Currently exploring new opportunities.">
-<meta property="og:title" content="Igor Samulenko — Staff Frontend Engineer">
-<meta property="og:description" content="15+ years at Intuit, Amazon, and Google. I architect component systems that stay fast as products grow.">
+<title>Igor Samulenko — Staff Software Engineer</title>
+<meta name="description" content="Staff Software Engineer with 15+ years building large-scale frontend systems at Intuit, Amazon, and Google. Architecture, performance, and teams that ship.">
+<meta property="og:title" content="Igor Samulenko — Staff Software Engineer">
+<meta property="og:description" content="15+ years building large-scale frontend systems at Intuit, Amazon, and Google. Architecture, performance, and teams that ship.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://igorsamulenko.com">
-<meta name="keywords" content="Staff Software Engineer, Frontend Engineer, React, TypeScript, GraphQL, Intuit, Amazon, Google, Bay Area, hiring, portfolio">
+<meta name="keywords" content="Staff Software Engineer, Frontend Engineer, Team Lead, React, TypeScript, GraphQL, Intuit, Amazon, Google, Bay Area, hiring, portfolio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Igor Samulenko — Staff Frontend Engineer">
-<meta name="twitter:description" content="15+ years at Intuit, Amazon, and Google. I architect component systems that stay fast as products grow.">
+<meta name="twitter:title" content="Igor Samulenko — Staff Software Engineer">
+<meta name="twitter:description" content="15+ years building large-scale frontend systems at Intuit, Amazon, and Google. Architecture, performance, and teams that ship.">
 <link rel="canonical" href="https://igorsamulenko.com">
 <script type="application/ld+json">
 {
@@ -353,8 +353,8 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
 <section class="hero" id="home">
   <div class="inner">
     <div class="available-badge">Open to Staff / Principal roles</div>
-    <h1>I build frontend systems<br>that work at <span class="accent">scale</span></h1>
-    <p class="subtitle">15+ years at Intuit, Amazon, and Google. I architect component systems that stay fast as products grow, and I lead the teams that ship them.</p>
+    <h1>Staff Software Engineer<br>& <span class="accent">Team Lead</span></h1>
+    <p class="subtitle">15+ years building large-scale frontend systems at Intuit, Amazon, and Google. I turn complex requirements into fast, reliable systems — and I lead the teams that ship them.</p>
     <div class="cta-row">
       <a href="#work" class="btn btn-primary">What I've built</a>
       <a href="#contact" class="btn btn-secondary">Let's talk</a>
@@ -373,7 +373,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
   <div class="inner reveal">
     <h2 class="section-label">About</h2>
     <p class="about-text">
-      The work I'm proudest of is Intuit's Data Discovery platform, the internal tool that data workers across the company use to discover and explore the data behind TurboTax, QuickBooks, Credit Karma, and Mailchimp. I redesigned the search experience from scratch, fixed a lineage visualization that was crashing browsers, and led the frontend team that <strong>5,000+ data workers</strong> depended on daily. Before that, I owned the "Your Locations" feature for the Alexa mobile app at Amazon, serving <strong>10M+ users</strong> on React Native.
+      I've spent most of my career making complex data accessible to the people who need it. Most recently, 6.5 years at Intuit leading frontend for the enterprise data platform that <strong>TurboTax, QuickBooks, Credit Karma, and Mailchimp</strong> data workers depend on. Before that, I built cross-platform mobile experiences at Amazon for <strong>10M+ users</strong> and supply chain tools at Google. I started in Java backends, moved through every major frontend framework, and landed on React and TypeScript — because that's where the hardest problems are.
     </p>
   </div>
 </section>
@@ -384,7 +384,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
     <div class="cases-grid">
       <article class="case-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('expanded');this.setAttribute('aria-expanded',this.classList.contains('expanded'))">
         <h3>Data Map Search 2.0</h3>
-        <p class="case-desc">Config-driven faceted search for an enterprise data discovery platform serving 5,000+ data workers.</p>
+        <p class="case-desc">Led a 6-person team to architect and deliver a next-generation search experience for 5,000+ data workers.</p>
         <div class="case-metrics">
           <div class="metric"><span class="num" data-target="12" data-suffix="x">12x</span><span class="label">Faster queries</span></div>
           <div class="metric"><span class="num" data-target="10" data-suffix="%">10%</span><span class="label">Precision gain</span></div>
@@ -392,9 +392,9 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         </div>
         <div class="case-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">REST API</span><span class="tag">CI/CD</span></div>
         <div class="case-detail">
-          <p><strong>The problem:</strong> Data workers across the enterprise were abandoning search queries and asking colleagues on Slack instead. Queries took 3-5 seconds. Precision was poor.</p>
-          <p><strong>What I built:</strong> I led a 6-person team to redesign the search from scratch. The core architectural decision: make the entire faceted search UI config-driven. Each facet type is defined in JSON configuration. Adding a new filter means adding a config entry, not writing new code. This cost two extra sprints upfront but paid for itself within the first quarter as 10+ new filter types were added through config alone.</p>
-          <p><strong>The result:</strong> Queries dropped from 3-5 seconds to 200-400ms. Two of the three engineers I mentored were promoted within a year.</p>
+          <p><strong>The problem:</strong> Data workers across the enterprise were abandoning search queries and asking colleagues on Slack instead. Queries took 3-5 seconds. Precision was poor. Product identified it as a top pain point.</p>
+          <p><strong>What was built:</strong> Worked with UX designers in Figma and backend engineers to define clean API contracts and module boundaries. Designed a component-based frontend architecture with a thin TypeScript client talking to the Search Service REST API. The core decision: make the entire faceted search UI config-driven. Each facet type — dropdown, checkbox, date range, autocomplete — is defined in JSON configuration. Adding a new filter means adding a config entry, not writing new code. That cost two extra sprints upfront but paid for itself within the first quarter as 10+ new filter types were added through config alone.</p>
+          <p><strong>The result:</strong> Queries dropped from 3-5 seconds to 200-400ms. Set up CI/CD for 2 daily releases and maintained 99.9% uptime processing 1M+ daily requests. Two of the three engineers mentored were promoted within a year.</p>
           <p>Part of Intuit's Data Mesh initiative, featured at <a href="https://www.youtube.com/watch?v=L_Q7LPB5HcA" target="_blank" rel="noopener">AWS re:Invent</a> and in Intuit's <a href="https://medium.com/intuit-engineering/the-data-mesh-strategy-behind-intuits-global-financial-technology-platform-db862fd45e0b" target="_blank" rel="noopener">engineering blog</a>.</p>
           <div class="case-mockup">
             <svg aria-hidden="true" viewBox="0 0 560 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -440,7 +440,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
 
       <article class="case-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('expanded');this.setAttribute('aria-expanded',this.classList.contains('expanded'))">
         <h3>Lineage UI Performance</h3>
-        <p class="case-desc">Took a data lineage visualization from completely unusable to instant response.</p>
+        <p class="case-desc">Diagnosed and fixed a production UI that was freezing for 3 minutes and crashing 500+ users' browsers daily.</p>
         <div class="case-metrics">
           <div class="metric"><span class="num" data-target="6" data-suffix="x" data-prefix="5-">5-6x</span><span class="label">Faster loads</span></div>
           <div class="metric"><span class="num" data-target="43" data-suffix="%">43%</span><span class="label">Less memory</span></div>
@@ -448,10 +448,10 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         </div>
         <div class="case-tags"><span class="tag">React</span><span class="tag">Redux</span><span class="tag">Virtual Scrolling</span><span class="tag">Profiling</span></div>
         <div class="case-detail">
-          <p><strong>The problem:</strong> When users opened large data lineage graphs (2,500+ nodes), the app froze for up to 3 minutes. Memory spiked to 700MB. People were force-quitting browsers. 500+ users were affected daily.</p>
-          <p><strong>The wrong assumption:</strong> I initially assumed the backend API was the bottleneck. Spent two days profiling the wrong layer. The backend was fine.</p>
-          <p><strong>The real fix:</strong> Chrome DevTools revealed the frontend was making 3 API calls when only 2 were needed, rendering all 2,500+ rows without virtualization, and duplicating state across components. I eliminated the redundant call, parallelized the remaining two, migrated to virtual scrolling, introduced a shared Redux store, and wrote 24 regression tests.</p>
-          <p><strong>The lesson:</strong> Don't let intuition skip diagnostics. Profile end-to-end first. This became our team's documented best practice for performance debugging.</p>
+          <p><strong>The problem:</strong> When users opened large data lineage graphs (2,500+ nodes), the app froze for up to 3 minutes. Memory spiked to 700MB. People were force-quitting browsers. 500+ users were affected daily, losing roughly 2 hours of collective productivity.</p>
+          <p><strong>The wrong assumption:</strong> Initially assumed the backend API was the bottleneck — the data volumes felt huge. Spent two days profiling the wrong layer and coordinating with the backend team. The backend was fine.</p>
+          <p><strong>The real fix:</strong> Chrome DevTools Network tab revealed the real issues: 3 API calls when only 2 were needed (a leftover from an earlier implementation), all 2,500+ rows rendered in the DOM without virtualization, and state duplicated across components. Each one was bad; together they were catastrophic on large graphs. Eliminated the redundant call, parallelized the remaining two, migrated to React Base Table with virtual scrolling, introduced a shared Redux store, added async data processing, and optimized component lifecycles. Wrote 24 regression tests and stress-tested with the largest production graphs.</p>
+          <p><strong>The lesson:</strong> Profile the full request chain before assuming anything. Let the data tell you where the problem is. This became the team's documented best practice for performance debugging.</p>
           <div class="case-mockup">
             <svg aria-hidden="true" viewBox="0 0 560 180" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Source nodes -->
@@ -488,7 +488,7 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
 
       <article class="case-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('expanded');this.setAttribute('aria-expanded',this.classList.contains('expanded'))">
         <h3>Frontend Health Scorecard</h3>
-        <p class="case-desc">Built an observability framework measuring frontend maturity across 13 plugins spanning multiple teams.</p>
+        <p class="case-desc">Built an org-wide frontend health scorecard that turned invisible tech debt into actionable data across 13 plugins.</p>
         <div class="case-metrics">
           <div class="metric"><span class="num" data-target="80" data-suffix="%">80%</span><span class="label">Coverage</span></div>
           <div class="metric"><span class="num" data-target="13" data-suffix="">13</span><span class="label">Plugins assessed</span></div>
@@ -496,9 +496,9 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
         </div>
         <div class="case-tags"><span class="tag">RUM/FCI</span><span class="tag">Code Coverage</span><span class="tag">Storybook</span><span class="tag">CI/CD</span></div>
         <div class="case-detail">
-          <p><strong>The problem:</strong> Frontend technical debt was invisible. No consistent way to measure RUM adoption, code coverage, test infrastructure, or documentation across teams. Teams couldn't advocate for remediation time because they couldn't quantify the problem.</p>
-          <p><strong>What I built:</strong> A phased scorecard framework. Phase 1 established baselines without requiring immediate fixes, reducing resistance. Phase 2 introduced prioritized targets. I framed it as a tool that helps teams make the case for tech debt time, not a stick to beat them with.</p>
-          <p><strong>The result:</strong> 80% coverage across all frontend plugins. $10K+ in OpEx savings identified. Teams that were initially resistant adopted the framework.</p>
+          <p><strong>The problem:</strong> Frontend technical debt was invisible across the org. No consistent way to measure RUM adoption, code coverage, test infrastructure, or documentation across 13 plugins and multiple teams. Teams couldn't advocate for remediation time because they couldn't quantify the problem. Several frontend leads pushed back hard — they saw this as extra work that would just expose gaps.</p>
+          <p><strong>What was built:</strong> A phased scorecard framework. Phase 1 established baselines without requiring immediate fixes — no team refused, because nothing was being asked of them yet except measurement. Phase 2 introduced prioritized targets. Built quick prototypes to make conversations concrete. Framed it as a tool that helps teams advocate for dedicated tech debt time on their roadmaps, not a stick to beat them with. That reframing was the turning point.</p>
+          <p><strong>The result:</strong> 80% coverage across all frontend plugins. $10K+ in OpEx savings identified from fewer production incidents. Teams that were initially resistant adopted the framework, and the director asked for the cross-org excellence work to continue into the next quarter.</p>
           <div class="case-mockup">
             <svg aria-hidden="true" viewBox="0 0 560 140" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Header -->
@@ -547,16 +547,16 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
 
       <article class="case-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="this.classList.toggle('expanded');this.setAttribute('aria-expanded',this.classList.contains('expanded'))">
         <h3>AI-Assisted Development</h3>
-        <p class="case-desc">Proved and scaled AI coding tools across a 50-person engineering organization.</p>
+        <p class="case-desc">Proved 2-3x coding speed gains with AI tools, then scaled adoption across a 50-person engineering org.</p>
         <div class="case-metrics">
           <div class="metric"><span class="num" data-target="3" data-suffix="x" data-prefix="2-">2-3x</span><span class="label">Coding speed</span></div>
           <div class="metric"><span class="num" data-target="50" data-suffix="+">50+</span><span class="label">Engineers adopted</span></div>
         </div>
         <div class="case-tags"><span class="tag">Cursor AI</span><span class="tag">Claude</span><span class="tag">PR Automation</span></div>
         <div class="case-detail">
-          <p><strong>The problem:</strong> Our frontend team was under pressure to ship more per quarter, but velocity had plateaued.</p>
-          <p><strong>What I did:</strong> I proved it with my own output first. Scaffolding a React component with tests and Storybook went from ~45 minutes to ~15-20 minutes. I ran a brown bag using real backlog tasks and presented results at an engineering-wide forum. My PRs were passing review at the same quality bar, just faster. I also enabled a PR review agent across our repositories that caught mechanical issues so human reviewers could focus on design and logic.</p>
-          <p><strong>The result:</strong> Adoption across the broader 50-person org. My manager noted the team was "concretely accelerating the way we deliver through AI tooling."</p>
+          <p><strong>The problem:</strong> A 10-person frontend team under pressure to ship more per quarter, but velocity had plateaued. More sprints and more hours weren't sustainable. Nobody had demonstrated concrete AI gains yet.</p>
+          <p><strong>What was done:</strong> Proved it with real output first — integrated Cursor AI into daily workflow for scaffolding, test generation, refactoring, and PR descriptions. Tracked results: consistently hitting 2-3x coding speed on UI tasks. Scaffolding a React component with tests and Storybook went from ~45 minutes to ~15-20 minutes. Hosted a brown bag using real backlog tasks, not toy examples, with 90% attendance. Presented at an engineering-wide forum for 50+ attendees. Enabled a PR review agent across repositories that caught missing null checks, inconsistent error handling, and unused imports — so human reviewers could focus on design and logic.</p>
+          <p><strong>The result:</strong> Team-wide adoption across the broader 50-person org. PRs passing review at the same quality bar, just faster. Manager noted the team was "concretely accelerating the way we deliver through AI tooling."</p>
         </div>
       </article>
     </div>
@@ -568,23 +568,23 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
     <h2 class="section-label reveal">Experience</h2>
     <div class="timeline">
       <div class="timeline-item reveal">
-        <div><h3>Staff Software Engineer</h3><div class="company">Intuit</div><div class="role-detail">Led frontend for Data Discovery & Exploration platform. 6-person team, React/TypeScript/GraphQL.</div></div>
+        <div><h3>Staff Software Engineer</h3><div class="company">Intuit</div><div class="role-detail">Led 6-person team architecting DDE platform interfaces. React/TypeScript/GraphQL, 99.9% uptime, 1M+ daily requests.</div></div>
         <div class="dates">2019 — 2026<br>6.5 years</div>
       </div>
       <div class="timeline-item reveal">
-        <div><h3>Software Development Engineer II</h3><div class="company">Amazon Lab126</div><div class="role-detail">Owned "Your Locations" feature for Alexa mobile app. React Native, 10M+ users.</div></div>
+        <div><h3>Software Development Engineer II</h3><div class="company">Amazon Lab126</div><div class="role-detail">Owned end-to-end development of "Your Locations" for Alexa mobile app. React Native/TypeScript/Redux, 10M+ users.</div></div>
         <div class="dates">2018 — 2019</div>
       </div>
       <div class="timeline-item reveal">
-        <div><h3>Software Engineer (Contract)</h3><div class="company">Google</div><div class="role-detail">Supply chain liability projection module. JavaScript/AngularJS, Material Design.</div></div>
+        <div><h3>Software Engineer (Contract)</h3><div class="company">Google</div><div class="role-detail">Liability projection module for supply chain. JavaScript/ES6/AngularJS, improved data accuracy 10% for 100+ users.</div></div>
         <div class="dates">2017 — 2018</div>
       </div>
       <div class="timeline-item reveal">
-        <div><h3>Lead Software Engineer (Contract)</h3><div class="company">BMC Software</div><div class="role-detail">Frontend architecture for enterprise PaaS. 50+ clients.</div></div>
+        <div><h3>Lead Software Engineer (Contract)</h3><div class="company">BMC Software</div><div class="role-detail">Led frontend architecture for enterprise PaaS. Metadata-driven cross-platform interfaces, 50+ clients.</div></div>
         <div class="dates">2015 — 2017</div>
       </div>
       <div class="timeline-item reveal">
-        <div><h3>Earlier roles</h3><div class="company">GlobalLogic, Luxoft, NIX Solutions</div><div class="role-detail">Led teams building web apps, IT service management tools, and financial dashboards.</div></div>
+        <div><h3>Earlier roles</h3><div class="company">GlobalLogic, Luxoft, NIX Solutions</div><div class="role-detail">Led teams building scalable web apps, IT service management tools, and financial dashboards. Reduced incident resolution up to 50%.</div></div>
         <div class="dates">2008 — 2015</div>
       </div>
       <div class="timeline-item reveal">
@@ -599,11 +599,11 @@ footer{padding:3rem 2rem;border-top:1px solid var(--c-border);text-align:center;
   <div class="inner">
     <h2 class="section-label reveal">How I work</h2>
     <div class="approach-prose">
-      <p class="reveal">I get things moving. When requirements are vague, I don't wait for clarity to arrive — I dig in, talk to the right people, prototype something tangible, and let that drive the conversation forward. Ambiguity is just a problem to solve, not a reason to stall.</p>
-      <p class="reveal">I write the spec, build the first component, and hand the team a clear path. I like giving people direction through working code and well-structured technical documents — not abstract plans. When someone picks up my work, the patterns should make the next decision obvious.</p>
-      <p class="reveal">Frontend is where I come alive. I care deeply about component architecture, performance, and that moment when a UI just clicks — when it's fast, polished, and people notice. I've spent 15 years chasing that feeling across React, TypeScript, and large-scale design systems.</p>
-      <p class="reveal">I pick up what I need to. I started my career writing Java backends, then moved through ActionScript, AngularJS, and landed on React and TypeScript — each shift because that's where the most interesting problems were. New framework, unfamiliar domain, a tool that didn't exist last month — I learn fast and start contributing before the onboarding doc says I should.</p>
-      <p class="reveal">I ship. Scope gets trimmed, edge cases get filed for later, but the thing goes out the door and it works. Then we iterate.</p>
+      <p class="reveal">I get things moving. When requirements are vague, I dig in, ask targeted questions, prototype something tangible, and let that drive the conversation forward. No specs? I reverse-engineer the codebase, talk to the PM, and have a working spec by end of day. Ambiguity is just a problem to solve, not a reason to stall.</p>
+      <p class="reveal">I give direction through working code and well-structured specs, not abstract plans. I write the spec, build the first component, and set the patterns. When someone picks up my work, the next decision should be obvious.</p>
+      <p class="reveal">Frontend is where I come alive. Component architecture, performance, that moment when a UI just clicks — fast, polished, and people notice. I've spent 15 years chasing that across React, TypeScript, and large-scale design systems.</p>
+      <p class="reveal">I started in Java backends, moved through ActionScript, AngularJS, and landed on React and TypeScript — each shift because that's where the most interesting problems were. New framework, unfamiliar domain, a tool that didn't exist last month — I learn fast and start contributing before the onboarding doc says I should.</p>
+      <p class="reveal">I ship. Scope gets trimmed, edge cases get filed for later, but the thing goes out the door and it works. Then I iterate.</p>
     </div>
   </div>
 </section>
