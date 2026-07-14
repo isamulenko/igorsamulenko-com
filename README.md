@@ -56,6 +56,18 @@ python3 minify.py
 cp -r images s3/
 ```
 
+## Verify
+
+Run the local checks before opening a PR or deploying:
+
+```bash
+./verify.sh
+```
+
+The verifier runs minifier regression tests, confirms `s3/index.html` matches
+the current minifier output, checks required deploy files, and rejects tracked
+`.DS_Store` files.
+
 ## Deployment
 
 Upload contents of `s3/` folder to:
